@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #000;
+}
+
+body.dark {
+  background: #0f172a;
+  color: #fff;
+}
+
+/* Container */
+.todo-container {
+  background: #ffffff;
+  width: 380px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+body.dark .todo-container {
+  background: #1e293b;
+}
+
+/* Head */
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  gap: 10px;
+}
+
+/* Inputs */
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #000;           /* ✅ FIX */
+  background: #fff;
+}
+
+body.dark input {
+  background: #334155;  /* ✅ FIX */
+  color: #fff;
+  border: 1px solid #475569;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* Buttons */
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+/* Input box */
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.filters button {
+  flex: 1;
+  margin: 0 3px;
+  background: #cbd5e1;
+  color: #000;
+}
+
+.filters button.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+}
+
+li {
+  background: #f8fafc;
+  margin-bottom: 6px;
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark li {
+  background: #334155;
+}
+
+.task-left {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  align-items: center;
+}
+
+.task-left span.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Empty message */
+#emptyMsg {
+  text-align: center;
+  color: gray;
+  display: none;
+}
+
+/* Clear button */
+#clearDone {
+  margin-top: 10px;
+  width: 100%;
+  background: red;
+}

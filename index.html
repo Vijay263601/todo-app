@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Day Wise To-Do App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="todo-container">
+  <h2>Day Wise To-Do List</h2>
+
+  <div class="top-bar">
+    <input type="date" id="datePicker">
+    <button id="darkToggle">🌙</button>
+  </div>
+
+  <div class="input-box">
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button id="addBtn">Add</button>
+  </div>
+
+  <div class="filters">
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="done">Done</button>
+    <button data-filter="pending">Pending</button>
+  </div>
+
+  <p id="counter"></p>
+  <p id="emptyMsg">No tasks for this day 👆</p>
+
+  <ul id="taskList"></ul>
+
+  <button id="clearDone">Clear Completed</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
